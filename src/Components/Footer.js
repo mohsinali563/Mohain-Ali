@@ -1,7 +1,7 @@
 const Footer = () => {
-    return ( 
-        <div className="Footer   row ">
-           <div className="col-lg-12   pt-3 ">
+    return ( <>
+        <div className="Footer  row  ">
+           <div className="col-lg-12 pb-3  pt-3 ">
             <h4 className="text-center text-light"><span className="text-success">Contact</span> On</h4>
             <div className="text-center">
             <a href=""><i class="bi bi-facebook"></i></a>
@@ -13,7 +13,11 @@ const Footer = () => {
             </div>
            </div>
         </div>
+        <div className="Lower-footer ">
+            <p className=" py-1 d-flex align-items-center justify-content-center pt-3">©Copyright Mohsin Ali 2023</p>
+           </div>
+        </>
      );
 }
- 
+
 export default Footer;

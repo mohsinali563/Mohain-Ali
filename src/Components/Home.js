@@ -9,8 +9,8 @@ const Home = () => {
             <div className="my-5 mx-5   home-description">
             <h1 className="text-light">Mohsin ALi</h1>
             <p className=" sub">WEB DEVELOPER</p>
-            <p className="text-light descrip">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores similique vero nesciunt quo qui iure laudantium quod voluptatum? </p>
-            <a href="#" className="btn btn-success mt-3">My Works</a>
+            <p className="text-light descrip">Step into the boundless realm of the Digital Frontier, where imagination seamlessly merges with the power of code, and every pixel is a canvas for crafting extraordinary online experiences.</p>
+            <a href="/Projects" className="btn btn-success mt-3">My Works</a>
             </div>
             
             </div>

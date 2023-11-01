@@ -10,10 +10,7 @@ const Myskills = () => {
             My <span className="text-success ">Skills</span>
           </h2>
           <p className="text-light ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-            cumque nemo et sunt aliquid quos veniam praesentium dolor excepturi
-            cum nulla, dolores fugiat, modi cupiditate perspiciatis eligendi
-            consequatur maxime asperiores.
+          My web development SkillSets, marked by expertise in HTML, CSS, and JavaScript empowers me to craft captivating and interactive web experiences. With a strong command of React and JSX , I bring web applications to life , From my skillset I can trun your web vision in to reality.   
           </p>
         </div>
         <div className="col-lg-12 ">

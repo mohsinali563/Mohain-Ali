@@ -1,3 +1,6 @@
+import { useState } from "react";
+import $ from "jquery"
+import { type } from "@testing-library/user-event/dist/type";
 const Contactme = () => {
   const localLinks ={
     borderRadius:"100%",
@@ -10,6 +13,22 @@ const Contactme = () => {
     fontWeight:"700",
     marginBottom:"0"
   }
+  const [name,setName]= useState("");
+  const [email,setEmail]= useState("");
+  const [result,setResult]=useState("");
+  const handleSubmit =(e)=>{
+   e.preventDefault();
+   const form= $(e.target);
+   $.ajax({
+    type:"SEND",
+    url:form.attr("action"),
+    data:form.serialize(),
+    success(data){
+      setResult(data);
+    }
+   })
+  };
+console.log(result);
   
   return (
     <div className="Contactme   ">
@@ -47,11 +66,12 @@ const Contactme = () => {
         <div className="col-lg-4 mb-5">
           <div className="bg-light contact-form px-4 py-5 rounded">
             <h4 className="text-dark">Send Message</h4>
-            <form>
-              <input type="text" id="username" placeholder="Full Name" className="bg-light py-1 my-2" required/>
-              <input type="email" id="e-mail" placeholder="Email" className="bg-light py-1 my-2" required/>
-              <textarea  id="message" cols="10" rows="2" className="bg-light py-1 my-3" placeholder="Type Your Massage..." required></textarea>
-              <button className="btn btn-success mt-2 ">Send</button>
+            <form action="http://localhost:8000/server.php" method="SEND" onSubmit={(event)=>{handleSubmit(event);}}>
+              <input type="text" name="username" id="username" placeholder="Full Name" className="bg-light py-1 my-2" value={name} onChange={(e)=>{setName(e.target.value)}} required/>
+              <input type="email" name="email" id="e-mail" placeholder="Email" className="bg-light py-1 my-2" value={email}
+              onChange={(e)=>{setEmail(e.target.value)}} required/>
+              <textarea  id="message" name="message" cols="10" rows="2" className="bg-light py-1 my-3" placeholder="Type Your Massage..." required></textarea>
+              <button type="submit" className="btn btn-success mt-2 ">Send</button>
 
             </form>
           </div>

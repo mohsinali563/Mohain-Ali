@@ -101,12 +101,16 @@ animation: grdn 3s 1s infinite;
 
 .about-heading{
   font-family: 'Kanit', sans-serif;
+  font-size: 35px;
 }
 .aboutimage{
   width: 400px;
   border-radius: 15px;
   box-shadow: 1px 1px 15px 5px rgb(85, 116, 101) ;
   
+}
+.about-des{
+  font-size: 17px;
 }
 
 /* skills section */
@@ -158,27 +162,38 @@ display:inline-block;
 }
 
 /* projects-section */
-.Projects{
- background-image: linear-gradient(to bottom left ,#a9f0a9,#25e725);
+
+/* for background color and head setting */
+.projects{
+  background-image:linear-gradient(to left bottom,#1edd1e,#71cc71);
+
 }
-.project-des{
+.project-head h2{
+ font-size: 40px; 
+}
+.project-head p{
   width: 70%;
   margin: 0 auto;
+  font-size: 17px;
 }
-.portfolio-project{
+/* project cards section */
+.project-cards{
+  display: flex;
   justify-content: space-around;
+  align-items: center;
 }
-
-div.portfolio div img {
-  border: 20px solid #ffffffce;
-  border-radius: 15px;
+.project-cards div img{
+  border-radius: 5px;
+  border: 10px solid #034d0863;
+  cursor: pointer;
   transition: .3s;
 }
-
-div.portfolio div div img:hover{
+.project-cards div img:hover{
+  border: none;
+  border-radius: 10px;
   transition: .3s;
-  box-shadow: 1px 1px 20px 10px #f7e8e8;
-  border: 0;
+  margin-bottom: 0;
+  box-shadow: #dad5d5 1px 2px 20px 10px;
 }
 
 /* Footer section */
@@ -194,6 +209,11 @@ background-image:linear-gradient(to left bottom,#1edd1e,#71cc71);
   font-size: 30px;
   color: #fff;
   margin-left: 20px ;
+}
+
+/* lower footer part */
+.Lower-footer p{
+  color: #999898;
 }
 
 /* contactme section */
